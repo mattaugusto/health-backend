@@ -11,13 +11,13 @@ CREATE SEQUENCE ben_id_seq;
 
 CREATE TABLE public.beneficiaries
 (
-	id INTEGER PRIMARY KEY DEFAULT NEXTVAL('ben_id_seq'), ,
+	id INTEGER PRIMARY KEY DEFAULT NEXTVAL('ben_id_seq'),
 	first_name text COLLATE pg_catalog."default" NOT NULL,
 	last_name text COLLATE pg_catalog."default" NOT NULL,
 	username text COLLATE pg_catalog."default" NOT NULL,
     city text COLLATE pg_catalog."default" NOT NULL,
     state text COLLATE pg_catalog."default" NOT NULL,
-    zip text COLLATE pg_catalog."default" NOT NULL,
+    zip text COLLATE pg_catalog."default" NOT NULL
 )
 
 TABLESPACE pg_default;
