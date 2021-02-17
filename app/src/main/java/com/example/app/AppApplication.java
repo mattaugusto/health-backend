@@ -22,7 +22,9 @@ public class AppApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/beneficiaries").allowedOrigins(env.getProperty("spring.crossorigin.url"));
+				registry.addMapping("/api/beneficiaries/**")
+						.allowedOrigins(env.getProperty("spring.crossorigin.url"))
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
 			}
 		};
 	}
